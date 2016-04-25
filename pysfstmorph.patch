@@ -1,0 +1,46 @@
+--- mem.h	2008-03-03 12:12:29.000000000 +0100
++++ mem.h	2008-03-17 15:43:28.000000000 +0100
+@@ -47,22 +47,27 @@
+     pos = 0;
+   }
+ 
+-  void *alloc( size_t n ) {
+-    void *result;
+-    
+-    /* do memory alignment to multiples of 4 */
+-    if (n % 4)
+-      n += 4 - (n % 4);
+-    
+-    if (first_buffer == NULL || pos+n > MEMBUFFER_SIZE)
+-      add_buffer();
+-    if (pos+n > MEMBUFFER_SIZE)
+-      throw "Allocation of memory block larger than MEMBUFFER_SIZE attempted!";
+-    
+-    result = (void*)(first_buffer->buffer + pos);
+-    pos += n;
+-    return result;
+-  }
++// Inserted for pysfstmorph
++void *alloc(size_t);
++
++// Commented out for pysfstmorph; code also exists in mem.C
++//
++//  void *alloc( size_t n ) {
++//    void *result;
++//    
++//    /* do memory alignment to multiples of 4 */
++//    if (n % 4)
++//      n += 4 - (n % 4);
++//    
++//    if (first_buffer == NULL || pos+n > MEMBUFFER_SIZE)
++//      add_buffer();
++//    if (pos+n > MEMBUFFER_SIZE)
++//      throw "Allocation of memory block larger than MEMBUFFER_SIZE attempted!";
++//    
++//    result = (void*)(first_buffer->buffer + pos);
++//    pos += n;
++//    return result;
++//  }
+ 
+   //class MemError {};
+ 
