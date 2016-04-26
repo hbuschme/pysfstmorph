@@ -32,6 +32,7 @@ SMOR), which are build with the SFST C++ tools fst-compiler, fst-compact.
 
 ## A Sample Program
 
+```python
 >>> from pysfstmorph import Transducer
 >>> t = Transducer('/Users/hendrik/bin/SFST/data/SMOR/smor.a')
 >>> t.analyse('Kardinal)
@@ -40,6 +41,8 @@ SMOR), which are build with the SFST C++ tools fst-compiler, fst-compact.
 >>> t.generate('Kardinal<+NN><Masc><Dat><Sg>')
 	['Kardinal', 'Kardinale']
 >>> t.clean_up()
+```
+
 
 
 ## License
