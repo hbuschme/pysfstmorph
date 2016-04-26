@@ -12,7 +12,7 @@ allows access to the morphological analysis and generation capabilities.
 pysfstmorph makes use of transducers for computational morphology (e.g.,
 SMOR), which are build with the SFST C++ tools fst-compiler, fst-compact.
 
-[^sfst]: http://www.ims.uni-stuttgart.de/projekte/gramotron/SOFTWARE/SFST.html
+[^sfst]: http://www.cis.uni-muenchen.de/~schmid/tools/SFST/
 
 
 ## Installation and Build Instructions
