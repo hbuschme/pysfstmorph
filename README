@@ -1,9 +1,8 @@
-# ============================================================================
-# Diplomarbeit - pysfstmorph/README
-# Copyright (C) 2008 Hendrik Buschmeier, <hbuschme@TechFak.Uni-Bielefeld.DE>
-# ============================================================================
+# pysfstmorph
 
-pysfstmorp is a Python interface to the Stuttgart Finite State Transducer [1]
+Copyright (C) 2008 Hendrik Buschmeier, <hbuschme@uni-bielefeld.de>
+
+pysfstmorph is a Python interface to the Stuttgart Finite State Transducer [1]
 (SFST). pysfstmorph consists of two parts: (1) A C++ Python extension, which
 wraps the original SFST C++ sources (2) A Python class ("Transducer") for easy
 access to the extension.
@@ -14,7 +13,7 @@ pysfstmorph makes use of transducers for computational morphology (e.g.,
 SMOR), which are build with the SFST C++ tools fst-compiler, fst-compact.
 
 
-# --- Installation and Build Instructions ------------------------------------
+## Installation and Build Instructions
 
 1. Download SFST from [1] and extract it somewhere.
    - Compile SFST [optional]
@@ -31,7 +30,7 @@ SMOR), which are build with the SFST C++ tools fst-compiler, fst-compact.
    work with pysfstmorph). Also copy the file pysfstmorph.py to that location.
 
 
-# --- A Sample Program -------------------------------------------------------
+## A Sample Program
 
 >>> from pysfstmorph import Transducer
 >>> t = Transducer('/Users/hendrik/bin/SFST/data/SMOR/smor.a')
@@ -43,7 +42,7 @@ SMOR), which are build with the SFST C++ tools fst-compiler, fst-compact.
 >>> t.clean_up()
 
 
-# --- License ----------------------------------------------------------------
+## License
 
 pysfstmorph is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -59,6 +58,6 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-# --- References -------------------------------------------------------------
+## References
 
 [1] http://www.ims.uni-stuttgart.de/projekte/gramotron/SOFTWARE/SFST.html
